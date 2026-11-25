@@ -14,7 +14,7 @@ ROOT = Path.cwd()
 REVIEW = ROOT / ".impeccable/review"
 BANNER = "https://raw.githubusercontent.com/jceou-labs/.github/main/profile/assets/wall.jpg"
 
-PAGE = """<!doctype html><html><head><meta charset="utf-8">
+PAGE = """<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.8.1/github-markdown-light.css">
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
 <style>
