@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>jceou-labs wall</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;600&family=Palanquin:wght@400;500&family=Outfit:wght@500;600;800&family=JetBrains+Mono:wght@500;700&display=block">
+<style>
+  :root { --ink:#141414; --paper:#f4f4f2; }
+  html,body { margin:0; width:1536px; height:1024px; overflow:hidden; background:#9d9e9d; }
+  .wall { position:relative; width:1536px; height:1024px; background:url(../../assets/plates/pegboard.png) 0 0/1536px 1024px; }
+  .plate { position:absolute; filter:drop-shadow(7px 12px 9px rgba(0,0,0,.38)); }
+  .head { width:793.414043583535px; height:371.91283292978204px; filter:brightness(.78) contrast(1.15) drop-shadow(7px 12px 9px rgba(0,0,0,.38)); }
+  .win { position:absolute; width:184px; height:142px; border-radius:7px; }
+  .sheen { position:absolute; border-radius:7px; pointer-events:none;
+           background:linear-gradient(135deg, rgba(255,255,255,.28) 0%, rgba(255,255,255,.06) 32%, rgba(255,255,255,0) 55%); }
+  .title { position:absolute; left:448.00000000000006px; width:640.0px; top:142px; text-align:center;
+           font:800 118px/1 'Outfit',sans-serif; color:var(--paper); letter-spacing:-0.03em; }
+  .sub { position:absolute; left:448.00000000000006px; width:640.0px; top:282px; text-align:center;
+         font:500 36px/1 'Outfit',sans-serif; color:#dcdcd9; }
+  .label { position:absolute; text-align:center; }
+  .brand { font:600 17px/1 'Outfit',sans-serif; letter-spacing:0.02em; opacity:.85; }
+  .name { font:800 var(--name-size, 30px)/1.05 'Outfit',sans-serif; letter-spacing:-0.02em; white-space:nowrap; margin-top:3px; display:inline-block; }
+  .contents { margin:9px 22px 0; padding-top:8px; border-top:1.5px solid currentColor;
+              font:500 15px/1.2 'Palanquin',sans-serif; opacity:.92; white-space:nowrap; }
+  .strip { position:absolute; display:flex; align-items:center; justify-content:center;
+           font:700 var(--strip-size, 15px)/1 'JetBrains Mono',monospace; color:#f4f4f2; letter-spacing:-0.01em; white-space:nowrap; }
+</style></head>
+<body><div class="wall">
+  <img class="plate head" src="../../assets/plates/header-card.png" style="position:absolute;left:372.5843422114609px;top:42.411622276029064px" alt="">
+  <div class="title">jceou-labs</div>
+  <div class="sub">Free tools for Claude Code</div>
+  
+      <img class="plate pack" src="../../assets/plates/pack-context.png" style="left:-4.0px;top:294.0px" alt="">
+      <img class="win" src="../../assets/plates/window-context.png" style="left:160.0px;top:586.0px" alt="">
+      <div class="sheen" style="left:160.0px;top:586.0px;width:184px;height:142px"></div>
+      <div class="label" style="left:111.0px;top:780.0px;width:282px;color:#141414">
+        <div class="brand">claude-</div>
+        <div class="name">context</div>
+        <div class="contents">Gauge · Compact · Handoff note</div>
+      </div>
+      <div class="strip" style="left:111.0px;top:897.0px;width:282px;height:60px"><span>/plugin install context-claude</span></div>
+      <img class="plate pack" src="../../assets/plates/pack-tracker.png" style="left:340.0px;top:294.0px" alt="">
+      <img class="win" src="../../assets/plates/window-tracker.png" style="left:504.0px;top:586.0px" alt="">
+      <div class="sheen" style="left:504.0px;top:586.0px;width:184px;height:142px"></div>
+      <div class="label" style="left:455.0px;top:780.0px;width:282px;color:#ffffff">
+        <div class="brand">claude-</div>
+        <div class="name">project-tracker</div>
+        <div class="contents">Project pages · Overview · Offline</div>
+      </div>
+      <div class="strip" style="left:455.0px;top:897.0px;width:282px;height:60px"><span>Ask Claude: follow INSTALL.md</span></div>
+      <img class="plate pack" src="../../assets/plates/pack-images.png" style="left:684.0px;top:294.0px" alt="">
+      <img class="win" src="../../assets/plates/window-images.png" style="left:848.0px;top:586.0px" alt="">
+      <div class="sheen" style="left:848.0px;top:586.0px;width:184px;height:142px"></div>
+      <div class="label" style="left:799.0px;top:780.0px;width:282px;color:#141414">
+        <div class="brand">claude-</div>
+        <div class="name">local-images</div>
+        <div class="contents">ComfyUI · Z-Image Turbo · your GPU</div>
+      </div>
+      <div class="strip" style="left:799.0px;top:897.0px;width:282px;height:60px"><span>/plugin install local-images</span></div>
+      <img class="plate pack" src="../../assets/plates/pack-skills.png" style="left:1028.0px;top:294.0px" alt="">
+      <img class="win" src="../../assets/plates/window-skills.png" style="left:1192.0px;top:586.0px" alt="">
+      <div class="sheen" style="left:1192.0px;top:586.0px;width:184px;height:142px"></div>
+      <div class="label" style="left:1143.0px;top:780.0px;width:282px;color:#141414">
+        <div class="brand">claude-</div>
+        <div class="name">workflow-skills</div>
+        <div class="contents">9 skills · plan · handoff · review</div>
+      </div>
+      <div class="strip" style="left:1143.0px;top:897.0px;width:282px;height:60px"><span>/plugin install workflow-skills</span></div>
+</div>
+<script>
+  // one name size for all four packs: the largest that fits the longest name
+  const names = [...document.querySelectorAll('.name')];
+  let size = 34;
+  const fits = () => names.every(n => n.offsetWidth <= n.parentElement.clientWidth * 0.86);
+  document.fonts.ready.then(() => {
+    while (size > 14) { document.documentElement.style.setProperty('--name-size', size + 'px'); if (fits()) break; size -= 0.5; }
+    const strips = [...document.querySelectorAll('.strip span')];
+    let s = 17;
+    while (s > 10) { document.documentElement.style.setProperty('--strip-size', s + 'px');
+      if (strips.every(x => x.offsetWidth <= x.parentElement.clientWidth - 22)) break; s -= 0.5; }
+    document.body.dataset.ready = '1';
+  });
+</script>
+</body></html>

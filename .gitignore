@@ -1,0 +1,5 @@
+# Impeccable working files (mockups, crops, review state): only the config and the design record are kept.
+.impeccable/*
+!.impeccable/config.json
+!.impeccable/design.json
+regions.json

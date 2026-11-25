@@ -1,0 +1,354 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-25T10:17:20+00:00",
+  "title": "Design System: jceou-labs",
+  "extensions": {
+    "colorMeta": {
+      "pegboard-steel": {
+        "role": "neutral",
+        "displayName": "Pegboard Steel",
+        "canonical": "oklch(69.4% 0.006 247.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#232425",
+          "#3e4041",
+          "#5c5e60",
+          "#7e8083",
+          "#a2a5a8",
+          "#c8cbcd",
+          "#edeef0"
+        ],
+        "note": "Galvanized board, plate median of the steel (holes excluded). Compositor fallback #9d9e9d."
+      },
+      "sign-black": {
+        "role": "neutral",
+        "displayName": "Sign Black",
+        "canonical": "oklch(20.9% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ],
+        "note": "Header sign card after the compositor's brightness(.78)."
+      },
+      "sign-paper": {
+        "role": "neutral",
+        "displayName": "Sign Paper",
+        "canonical": "oklch(96.7% 0.003 106.4)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#40403f",
+          "#5e5e5d",
+          "#80807f",
+          "#a5a5a3",
+          "#cacac9",
+          "#eeeeed"
+        ],
+        "note": "Wordmark and price-strip command text."
+      },
+      "sign-subtitle": {
+        "role": "neutral",
+        "displayName": "Sign Subtitle",
+        "canonical": "oklch(89.4% 0.004 106.5)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#40403f",
+          "#5e5e5c",
+          "#80807e",
+          "#a5a5a2",
+          "#cbcbc8",
+          "#eeeeed"
+        ],
+        "note": "Second line of the sign."
+      },
+      "strip-black": {
+        "role": "neutral",
+        "displayName": "Strip Black",
+        "canonical": "oklch(17.3% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ],
+        "note": "Price-strip band, part of each pack plate."
+      },
+      "ink-black": {
+        "role": "neutral",
+        "displayName": "Ink Black",
+        "canonical": "oklch(19.1% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ],
+        "note": "Pack card text on orange, teal, yellow."
+      },
+      "ink-white": {
+        "role": "neutral",
+        "displayName": "Ink White",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#242424",
+          "#404040",
+          "#5d5d5d",
+          "#808080",
+          "#a4a4a4",
+          "#cacaca",
+          "#eeeeee"
+        ],
+        "note": "Pack card text on violet."
+      },
+      "pack-orange": {
+        "role": "primary",
+        "displayName": "Pack Orange",
+        "canonical": "oklch(69.6% 0.171 49.6)",
+        "tonalRamp": [
+          "#140803",
+          "#401500",
+          "#682b00",
+          "#934406",
+          "#c56018",
+          "#f48036",
+          "#ffae74",
+          "#ffe4cd"
+        ],
+        "note": "claude-context card. Plate median; render_logos.py uses #f4772b."
+      },
+      "pack-violet": {
+        "role": "primary",
+        "displayName": "Pack Violet",
+        "canonical": "oklch(56.0% 0.247 287.4)",
+        "tonalRamp": [
+          "#0b0522",
+          "#270068",
+          "#42199b",
+          "#5f34d0",
+          "#7f5aff",
+          "#a08bff",
+          "#c5b8ff",
+          "#ebe9ff"
+        ],
+        "note": "claude-project-tracker card, white ink. Plate median; render_logos.py uses #7b4dff."
+      },
+      "pack-teal": {
+        "role": "primary",
+        "displayName": "Pack Teal",
+        "canonical": "oklch(67.8% 0.120 184.2)",
+        "tonalRamp": [
+          "#020e0c",
+          "#002d27",
+          "#004c44",
+          "#006e63",
+          "#009588",
+          "#37bbad",
+          "#7ddfd2",
+          "#d2f8f1"
+        ],
+        "note": "claude-local-images card. Plate median; render_logos.py uses #00b3a4."
+      },
+      "pack-yellow": {
+        "role": "primary",
+        "displayName": "Pack Yellow",
+        "canonical": "oklch(85.2% 0.172 96.7)",
+        "tonalRamp": [
+          "#0d0b04",
+          "#2a2407",
+          "#4a3f0c",
+          "#6d5d11",
+          "#957f14",
+          "#bfa416",
+          "#ebc916",
+          "#fdefb5"
+        ],
+        "note": "claude-workflow-skills card. Plate median; window-skills and render_logos.py use #f5d31c."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Wordmark",
+        "purpose": "jceou-labs on the header sign."
+      },
+      "headline": {
+        "displayName": "Sign subtitle",
+        "purpose": "Second line of the sign."
+      },
+      "title": {
+        "displayName": "Tool name",
+        "purpose": "Name minus the claude- prefix; one fitted size (max 34px, 86% of card width) shared by all packs."
+      },
+      "label": {
+        "displayName": "Name prefix",
+        "purpose": "The claude- prefix above each name, 85% opacity."
+      },
+      "body": {
+        "displayName": "Contents line",
+        "purpose": "Real parts joined by middle dots under a 1.5px rule, 92% opacity."
+      },
+      "mono": {
+        "displayName": "Price strip",
+        "purpose": "Install command; one fitted size (max 17px, 22px spare) shared by all strips."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hanging",
+        "value": "drop-shadow(7px 12px 9px rgba(0,0,0,.38))",
+        "purpose": "Every hanging object: sign and packs. One light for the wall."
+      },
+      {
+        "name": "blister-sheen",
+        "value": "linear-gradient(135deg,rgba(255,255,255,.28) 0%,rgba(255,255,255,.06) 32%,rgba(255,255,255,0) 55%)",
+        "purpose": "Clear plastic over each window."
+      }
+    ],
+    "motion": [],
+    "breakpoints": [
+      {
+        "name": "layout",
+        "value": "1536px"
+      },
+      {
+        "name": "shipped",
+        "value": "1920px (1.25x render of wall.jpg)"
+      }
+    ],
+    "grid": {
+      "holePitch": "68.8px",
+      "firstHole": [
+        45.6,
+        58.0
+      ],
+      "holeRadius": "10.5px",
+      "hookRow": 402.0,
+      "packColumns": [
+        252.0,
+        596.0,
+        940.0,
+        1284.0
+      ],
+      "packPitch": "5 holes (344px)",
+      "signCentreX": 768
+    }
+  },
+  "components": [
+    {
+      "name": "Pack (claude-context)",
+      "kind": "card",
+      "refersTo": "pack-context",
+      "description": "Blister pack on its hook: real window, split name, ruled contents line, install command on the price strip.",
+      "html": "<div class=\"ds-pack\" style=\"background:#ee7725;color:#141414\"><div class=\"ds-window\"></div><div class=\"ds-brand\">claude-</div><div class=\"ds-name\">context</div><div class=\"ds-contents\">Gauge · Compact · Handoff note</div><div class=\"ds-strip\">/plugin install context-claude</div></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@500&family=Outfit:wght@500;600;800&family=JetBrains+Mono:wght@700&display=swap'); .ds-pack{width:282px;border-radius:18px;overflow:hidden;text-align:center;padding-top:24px;filter:drop-shadow(7px 12px 9px rgba(0,0,0,.38))} .ds-window{width:184px;height:142px;margin:0 auto 22px;border-radius:7px;background:linear-gradient(135deg,rgba(255,255,255,.28) 0%,rgba(255,255,255,.06) 32%,rgba(255,255,255,0) 55%),#161616} .ds-brand{font:600 17px/1 'Outfit',sans-serif;letter-spacing:.02em;opacity:.85} .ds-name{font:800 30px/1.05 'Outfit',sans-serif;letter-spacing:-.02em;margin-top:3px;white-space:nowrap} .ds-contents{margin:9px 22px 0;padding:8px 0 18px;border-top:1.5px solid currentColor;font:500 15px/1.2 'Palanquin',sans-serif;opacity:.92;white-space:nowrap} .ds-strip{height:60px;display:flex;align-items:center;justify-content:center;background:#101010;color:#f4f4f2;font:700 15px/1 'JetBrains Mono',monospace;letter-spacing:-.01em;white-space:nowrap}"
+    },
+    {
+      "name": "Pack (claude-project-tracker)",
+      "kind": "card",
+      "refersTo": "pack-tracker",
+      "description": "The violet pack, the only one with white ink.",
+      "html": "<div class=\"ds-pack\" style=\"background:#7547f9;color:#ffffff\"><div class=\"ds-window\"></div><div class=\"ds-brand\">claude-</div><div class=\"ds-name\">project-tracker</div><div class=\"ds-contents\">Project pages · Overview · Offline</div><div class=\"ds-strip\">Ask Claude: follow INSTALL.md</div></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@500&family=Outfit:wght@500;600;800&family=JetBrains+Mono:wght@700&display=swap'); .ds-pack{width:282px;border-radius:18px;overflow:hidden;text-align:center;padding-top:24px;filter:drop-shadow(7px 12px 9px rgba(0,0,0,.38))} .ds-window{width:184px;height:142px;margin:0 auto 22px;border-radius:7px;background:linear-gradient(135deg,rgba(255,255,255,.28) 0%,rgba(255,255,255,.06) 32%,rgba(255,255,255,0) 55%),#161616} .ds-brand{font:600 17px/1 'Outfit',sans-serif;letter-spacing:.02em;opacity:.85} .ds-name{font:800 30px/1.05 'Outfit',sans-serif;letter-spacing:-.02em;margin-top:3px;white-space:nowrap} .ds-contents{margin:9px 22px 0;padding:8px 0 18px;border-top:1.5px solid currentColor;font:500 15px/1.2 'Palanquin',sans-serif;opacity:.92;white-space:nowrap} .ds-strip{height:60px;display:flex;align-items:center;justify-content:center;background:#101010;color:#f4f4f2;font:700 15px/1 'JetBrains Mono',monospace;letter-spacing:-.01em;white-space:nowrap}"
+    },
+    {
+      "name": "Pack (claude-local-images)",
+      "kind": "card",
+      "refersTo": "pack-images",
+      "description": "The teal pack.",
+      "html": "<div class=\"ds-pack\" style=\"background:#00afa0;color:#141414\"><div class=\"ds-window\"></div><div class=\"ds-brand\">claude-</div><div class=\"ds-name\">local-images</div><div class=\"ds-contents\">ComfyUI · Z-Image Turbo · your GPU</div><div class=\"ds-strip\">/plugin install local-images</div></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@500&family=Outfit:wght@500;600;800&family=JetBrains+Mono:wght@700&display=swap'); .ds-pack{width:282px;border-radius:18px;overflow:hidden;text-align:center;padding-top:24px;filter:drop-shadow(7px 12px 9px rgba(0,0,0,.38))} .ds-window{width:184px;height:142px;margin:0 auto 22px;border-radius:7px;background:linear-gradient(135deg,rgba(255,255,255,.28) 0%,rgba(255,255,255,.06) 32%,rgba(255,255,255,0) 55%),#161616} .ds-brand{font:600 17px/1 'Outfit',sans-serif;letter-spacing:.02em;opacity:.85} .ds-name{font:800 30px/1.05 'Outfit',sans-serif;letter-spacing:-.02em;margin-top:3px;white-space:nowrap} .ds-contents{margin:9px 22px 0;padding:8px 0 18px;border-top:1.5px solid currentColor;font:500 15px/1.2 'Palanquin',sans-serif;opacity:.92;white-space:nowrap} .ds-strip{height:60px;display:flex;align-items:center;justify-content:center;background:#101010;color:#f4f4f2;font:700 15px/1 'JetBrains Mono',monospace;letter-spacing:-.01em;white-space:nowrap}"
+    },
+    {
+      "name": "Pack (claude-workflow-skills)",
+      "kind": "card",
+      "refersTo": "pack-skills",
+      "description": "The yellow pack.",
+      "html": "<div class=\"ds-pack\" style=\"background:#efcd16;color:#141414\"><div class=\"ds-window\"></div><div class=\"ds-brand\">claude-</div><div class=\"ds-name\">workflow-skills</div><div class=\"ds-contents\">9 skills · plan · handoff · review</div><div class=\"ds-strip\">/plugin install workflow-skills</div></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@500&family=Outfit:wght@500;600;800&family=JetBrains+Mono:wght@700&display=swap'); .ds-pack{width:282px;border-radius:18px;overflow:hidden;text-align:center;padding-top:24px;filter:drop-shadow(7px 12px 9px rgba(0,0,0,.38))} .ds-window{width:184px;height:142px;margin:0 auto 22px;border-radius:7px;background:linear-gradient(135deg,rgba(255,255,255,.28) 0%,rgba(255,255,255,.06) 32%,rgba(255,255,255,0) 55%),#161616} .ds-brand{font:600 17px/1 'Outfit',sans-serif;letter-spacing:.02em;opacity:.85} .ds-name{font:800 30px/1.05 'Outfit',sans-serif;letter-spacing:-.02em;margin-top:3px;white-space:nowrap} .ds-contents{margin:9px 22px 0;padding:8px 0 18px;border-top:1.5px solid currentColor;font:500 15px/1.2 'Palanquin',sans-serif;opacity:.92;white-space:nowrap} .ds-strip{height:60px;display:flex;align-items:center;justify-content:center;background:#101010;color:#f4f4f2;font:700 15px/1 'JetBrains Mono',monospace;letter-spacing:-.01em;white-space:nowrap}"
+    },
+    {
+      "name": "Header sign",
+      "kind": "custom",
+      "refersTo": "header-sign",
+      "description": "Matte black sign naming the workshop, hung from two hooks.",
+      "html": "<div class=\"ds-sign\"><div class=\"ds-title\">jceou-labs</div><div class=\"ds-sub\">Free tools for Claude Code</div></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@500&family=Outfit:wght@500;600;800&family=JetBrains+Mono:wght@700&display=swap'); .ds-sign{width:640px;padding:50px 0 48px;background:#181818;text-align:center;filter:drop-shadow(7px 12px 9px rgba(0,0,0,.38))} .ds-title{font:800 118px/1 'Outfit',sans-serif;letter-spacing:-.03em;color:#f4f4f2} .ds-sub{margin-top:22px;font:500 36px/1 'Outfit',sans-serif;color:#dcdcd9}"
+    },
+    {
+      "name": "Price strip",
+      "kind": "chip",
+      "refersTo": "price-strip",
+      "description": "The install command, the loudest line on each pack.",
+      "html": "<div class=\"ds-strip\">/plugin install local-images</div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@500&family=Outfit:wght@500;600;800&family=JetBrains+Mono:wght@700&display=swap'); .ds-strip{width:282px;height:60px;display:flex;align-items:center;justify-content:center;background:#101010;color:#f4f4f2;font:700 15px/1 'JetBrains Mono',monospace;letter-spacing:-.01em}"
+    },
+    {
+      "name": "Skills window",
+      "kind": "custom",
+      "refersTo": "blister-window",
+      "description": "The workflow-skills window: real skill names, alternate lines in yellow, under the blister sheen.",
+      "html": "<div class=\"ds-win\"><ul><li>session-handoff</li><li>session-retro</li><li>plan-first</li><li>adversarial-review</li><li>repo-sweep</li></ul></div>",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@500&family=Outfit:wght@500;600;800&family=JetBrains+Mono:wght@700&display=swap'); .ds-win{width:184px;height:142px;border-radius:7px;overflow:hidden;background:#161616;position:relative} .ds-win::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.28) 0%,rgba(255,255,255,.06) 32%,rgba(255,255,255,0) 55%)} .ds-win ul{list-style:none;margin:0;padding:11px 13px;font:500 10px/13.75px 'JetBrains Mono',monospace;color:#e8e8e6} .ds-win li:nth-child(odd){color:#f5d31c}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Le présentoir de quincaillerie (the hardware-store peg-hook display)",
+    "overview": "The organization is a wall in a hardware store. A perforated galvanized steel pegboard fills the frame, a black sign hangs from two hooks and names the workshop, and each tool hangs below it on its own peg hook as a blister pack you can take home in one line. Each pack shows the real tool through its clear window, names itself on the card and puts its install command on the black price strip.\n\nThe world is photographed retail stock, not illustration: real steel mottling, punched holes, chrome hooks, vacuum-formed plastic with a sheen, soft cast shadows. Colour belongs to the packs alone; everything else is steel, black and clear plastic. The page stays sober and concrete: a workshop rather than a company.\n\nEvery surface is a single composed raster (`profile/assets/wall.jpg`, 1920 x 1280), assembled from plates by `assets/build/render.py` through the HTML compositor `assets/build/wall.html` at a 1536 x 1024 layout rendered at 1.25x. All values below are layout px at 1536; multiply by 1.25 for the shipped JPEG.",
+    "keyCharacteristics": [
+      "One steel pegboard, one hole pitch, every hook on a hole.",
+      "One saturated colour per tool, nowhere else.",
+      "Real tool imagery in every window; no invented text on any pack.",
+      "The install line is the loudest line on each pack, set like a price strip.",
+      "Real, selectable text lives below the banner in GitHub's own Markdown."
+    ],
+    "rules": [
+      {
+        "name": "The One Colour Per Pack Rule",
+        "body": "Each tool owns exactly one saturated colour, used on its card and nowhere else on the wall. The sign, the board, the hooks and the strips stay steel, black and clear.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink By Contrast Rule",
+        "body": "Card ink is black (`#141414`) unless black falls below 4.5:1 on the pack colour, then white. Violet is the only current case (black 3.8:1, white 4.8:1).",
+        "section": "colors"
+      },
+      {
+        "name": "The Shared Size Rule",
+        "body": "Names fit together and strips fit together: one computed size per role across all packs, so no pack looks louder than another.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Light Rule",
+        "body": "One light source for the whole wall; a new object takes the same shadow offset, blur and opacity.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** put every hook ring on a pegboard hole; positions are hole columns, multiples of 68.8px.",
+      "**Do** show the real tool in each window: its own screenshot, output or real content.",
+      "**Do** keep text on the wall to real names, real contents and real install lines, set by the compositor.",
+      "**Do** ship the banner as one opaque composed JPEG with its own background, so it reads the same in GitHub light and dark themes.",
+      "**Do** keep everything a reader needs (description, install lines, links) as real Markdown text below the banner."
+    ],
+    "donts": [
+      "**Don't** print invented text, logos or fake labels on the pack plates; packs carry no text of their own.",
+      "**Don't** use a pack colour outside its own pack, or give two tools the same colour.",
+      "**Don't** rely on CSS, JavaScript or transparency in the README; GitHub strips the first two and the theme shows through the third."
+    ]
+  }
+}
