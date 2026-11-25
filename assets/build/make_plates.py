@@ -80,25 +80,35 @@ def fit(img, size, focus=(0.5, 0.5)):
     return img.resize(size, Image.LANCZOS)
 
 
+def window_context(src):
+    """claude-context: the real band (band-green.png, 776 x 60, dark mode at 28%), cut in three and enlarged so
+    it fills the window: the percentage pill and gauge, the token count, then the Compact and Handoff note buttons."""
+    tw, th = INSERT
+    glass = Image.open(Path(src) / "band-green.png").convert("RGBA")
+    # the band is translucent glass: lay it on the app's dark ground first
+    band = Image.alpha_composite(Image.new("RGBA", glass.size, (26, 26, 26, 255)), glass).convert("RGB")
+    ground = band.getpixel((255, 30))  # the band's own ground, between the gauge and the count
+    win = Image.new("RGB", INSERT, ground)
+    y0, y1 = 16, 44  # inside the band's border
+
+    def piece(x0, x1, width):
+        im = band.crop((x0, y0, x1, y1))
+        return im.resize((width, round((y1 - y0) * width / (x1 - x0))), Image.LANCZOS)
+
+    gauge = piece(20, 252, tw - 28)
+    count = piece(258, 400, round((400 - 258) * 1.55))
+    buttons = piece(423, 702, tw - 28)
+    gap = 18
+    y = (th - gauge.height - count.height - buttons.height - 2 * gap) // 2
+    win.paste(gauge, (14, y))
+    win.paste(count, ((tw - count.width) // 2, y + gauge.height + gap))
+    win.paste(buttons, (14, y + gauge.height + count.height + 2 * gap))
+    win.save(PLATES / "window-context.png")
+
+
 def windows(src):
     src = Path(src)
-    tw, th = INSERT
-    # claude-context: the real band, cut in three and enlarged so it fills the window:
-    # the percentage and bar, the token count, then the two buttons
-    band = Image.open(src / "band.png").convert("RGB")
-    win = Image.new("RGB", INSERT, (24, 24, 24))
-    gauge = band.crop((0, 0, 312, 52))
-    gauge = gauge.resize((tw - 24, round(52 * (tw - 24) / 312)), Image.LANCZOS)
-    count = band.crop((312, 0, 400, 52))
-    count = count.resize((round(88 * 1.7), round(52 * 1.7)), Image.LANCZOS)
-    buttons = band.crop((522, 0, 770, 52))
-    buttons = buttons.resize((round(248 * 1.35), round(52 * 1.35)), Image.LANCZOS)
-    gap = 6
-    y = (th - gauge.height - count.height - buttons.height - 2 * gap) // 2
-    win.paste(gauge, (12, y))
-    win.paste(count, (tw - count.width - 6, y + gauge.height + gap))
-    win.paste(buttons, (tw - buttons.width - 6, y + gauge.height + count.height + 2 * gap))
-    win.save(PLATES / "window-context.png")
+    window_context(src)
     # claude-project-tracker: the overview page, its headline and figures
     ov = Image.open(src / "overview.png").convert("RGB").crop((20, 96, 760, 666))
     fit(ov, INSERT).save(PLATES / "window-tracker.png")
